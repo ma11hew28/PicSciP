@@ -1,0 +1,8 @@
+.DS_Store
+.localized
+profile
+Thumbs.db
+
+build/*
+*.mode1v3
+*.pbxuser
