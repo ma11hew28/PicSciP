@@ -5,9 +5,7 @@
 
 NSString *const kHasBeenWelcomed = @"kHasBeenWelcomed";
 
-
 @implementation AppDelegate
-
 
 #pragma mark -
 #pragma mark Application lifecycle

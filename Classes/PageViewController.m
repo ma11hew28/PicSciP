@@ -14,8 +14,6 @@ static CGSize kImageSize = {1024, 1536};
 #pragma mark View loading and unloading
 
 - (void)loadView {
-	[[UIApplication sharedApplication] setStatusBarHidden:YES];
-
     // Step 1: make the outer paging scroll view
     CGRect pagingScrollViewFrame = [self frameForPagingScrollView];
     pagingScrollView = [[UIScrollView alloc] initWithFrame:pagingScrollViewFrame];
