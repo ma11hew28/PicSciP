@@ -48,14 +48,12 @@
     
     imageView.frame = frameToCenter;
 
-#ifdef _USE_OS_4_OR_LATER
     if ([imageView isKindOfClass:[TilingView class]]) {
         // to handle the interaction between CATiledLayer and high resolution screens, we need to manually set the
         // tiling view's contentScaleFactor to 1.0. (If we omitted this, it would be 2.0 on high resolution screens,
         // which would cause the CATiledLayer to ask us for tiles of the wrong scales.)
         imageView.contentScaleFactor = 1.0;
     }	
-#endif
 }
 
 
@@ -119,11 +117,7 @@
     
     // on high resolution screens we have double the pixel density, so we will be seeing every pixel if we limit the
     // maximum zoom scale to 0.5.
-#ifdef _USE_OS_4_OR_LATER
     CGFloat maxScale = 1.0 / [[UIScreen mainScreen] scale];
-#else
-	CGFloat maxScale = 1.0;
-#endif
 
     // don't let minScale exceed maxScale. (If the image is smaller than the screen, we don't want to force it to be zoomed.) 
     if (minScale > maxScale) {
